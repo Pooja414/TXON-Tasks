@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .tb{
+            background-color: #7d66f0;
+            margin-left: auto;
+            margin-right: auto;
+          margin-top: 50px;
+        }
+        .area{
+            width: 210px;
+            height: 50px;
+            color:rgb(4, 26, 81);
+        }
+        .btn{
+            font-size: large;
+            width: 50px;;
+            height: 50px;
+            background-color: white;
+            color: rgb(4, 26, 81);
+
+        }
+        .h{
+            margin-top: 100px;
+            text-align: center;
+            color:white;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h" >Calculator</h1>
+  <table class="tb">
+    <tr>
+        <td colspan="4"><input type="text" class="area" id="res"></td>
+        
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="("  class="btn" onclick="display('(')">
+        </td>
+        <td>
+            <input type="button" value=")"  class="btn" onclick="display(')')">
+        </td>
+        <td>
+            <input type="button" value="ans"  class="btn" onclick="solve()">
+        </td>
+        <td>
+            <input type="button" value="C"  class="btn" onclick="clearscn()">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="7"  class="btn" onclick="display('7')">
+        </td>
+        <td>
+            <input type="button" value="8"  class="btn" onclick="display('8')">
+        </td>
+        <td>
+            <input type="button" value="9"  class="btn" onclick="display('9')">
+        </td>
+        <td>
+            <input type="button" value="*"  class="btn" onclick="display('*')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="4"  class="btn" onclick="display('4')">
+        </td>
+
+        <td>
+            <input type="button" value="5"  class="btn" onclick="display('5')">
+        </td>
+        <td>
+            <input type="button" value="6"  class="btn" onclick="display('6')">
+        </td>
+        <td>
+            <input type="button" value="-"  class="btn" onclick="display('-')">
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="button" value="1"  class="btn" onclick="display('1')">
+        </td>
+        
+        <td>
+            <input type="button" value="2"  class="btn" onclick="display('2')">
+        </td>
+ 
+        <td>
+            <input type="button" value="3"  class="btn" onclick="display('3')">
+        </td>
+        <td>
+            <input type="button" value="+"  class="btn" onclick="display('+')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="0"  class="btn" onclick="display('0')">
+        </td>
+        
+        <td>
+            <input type="button" value="."  class="btn" onclick="display('.')">
+        </td>
+        <td>
+            <input type="button" value="%"  class="btn" onclick="display('.')">
+        </td>
+       
+        <td>
+            <input type="button" value="/"  class="btn" onclick="display('/')">
+        </td>
+ 
+    </tr>
+  </table>  
+  <script type="text/javascript">
+    function display(val){
+   document.getElementById("res").value+=val
+    }
+    function solve(){
+        let x= document.getElementById("res").value
+        let y=eval(x);
+        document.getElementById("res").value=y
+    }
+    function clearscn(){
+        document.getElementById("res").value=" "
+    }
+  </script>
+</body>
+</html>
